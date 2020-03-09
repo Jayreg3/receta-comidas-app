@@ -1,0 +1,9 @@
+      <Text>La pantalla de las comidas de diferentes categorías</Text>
+      <Button
+        title="Ir a las detalles de las comidas!"
+        onPress={() =>
+          props.navigation.navigate({
+            routeName: "ComidasDetalles"
+          })
+        }
+      />
