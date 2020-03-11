@@ -15,12 +15,10 @@ import MealDetailsScreen from "../screens/MealDetailsScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 
 const defaultStackNavOptions = {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Platform.OS === "android" ? colors.primaryColor : ""
-    },
-    headerTintColor: Platform.OS === "android" ? "white" : colors.primaryColor
-  }
+  headerStyle: {
+    backgroundColor: Platform.OS === "android" ? colors.primaryColor : ""
+  },
+  headerTintColor: Platform.OS === "android" ? "white" : colors.primaryColor
 };
 
 const MealsNavigator = createStackNavigator(
