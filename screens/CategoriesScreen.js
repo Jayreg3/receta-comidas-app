@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  Button,
-  FlatList,
-  TouchableOpacity
-} from "react-native";
+import { FlatList } from "react-native";
 
 import { CATEGORIES } from "../data/dummy-data";
 import CategoryGridTile from "../components/CategoryGridTile";
@@ -29,27 +22,8 @@ const CategoriesScreen = props => {
     );
   };
   return (
-    <View style={styles.screen}>
-      <Text>La pantalla de las categorías</Text>
-      <Button
-        title="Ir a comidas!"
-        onPress={() =>
-          props.navigation.navigate({
-            routeName: "CategoríasComidas"
-          })
-        }
-      />
-      <FlatList data={CATEGORIES} renderItem={renderGridItem} numColumns={2} />
-    </View>
+    <FlatList data={CATEGORIES} renderItem={renderGridItem} numColumns={2} />
   );
 };
-
-const styles = StyleSheet.create({
-  screen: {
-    // flex: 1,
-    // justifyContent: "center",
-    // alignItems: "center"
-  }
-});
 
 export default CategoriesScreen;
