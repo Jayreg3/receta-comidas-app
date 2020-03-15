@@ -26,4 +26,8 @@ const CategoriesScreen = props => {
   );
 };
 
+CategoriesScreen.navigationOptions = {
+  headerTitle: "Categorías de comidas"
+};
+
 export default CategoriesScreen;

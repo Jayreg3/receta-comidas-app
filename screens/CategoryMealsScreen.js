@@ -25,6 +25,10 @@ const CategoryMealsScreen = props => {
     );
   }
 
+  CategoryMealsScreen.navigationOptions = {
+    headerTitle: "Lista de comidas"
+  };
+
   styles = StyleSheet.create({
     content: {
       flex: 1,

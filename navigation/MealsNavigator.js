@@ -45,7 +45,6 @@ const MealsNavigator = createStackNavigator(
       screen: CategoriesScreen,
       navigationOptions: navData => {
         return {
-          headerTitle: "Categorías de comidas",
           headerLeft: sideDrawer(navData, "menu", "ios-menu", () =>
             navData.navigation.toggleDrawer()
           )
@@ -72,7 +71,7 @@ const FavNavigator = createStackNavigator(
         };
       }
     },
-    MealDetail: MealDetailsScreen
+    ComidasDetalles: MealDetailsScreen
   },
   {
     defaultNavigationOptions: defaultStackNavOptions
@@ -85,7 +84,7 @@ const tabScreenConfig = {
     navigationOptions: {
       tabBarLabel:
         Platform.OS === "android" ? (
-          <Text style={{ fontFamily: "open-sans" }}>Favoritas</Text>
+          <Text style={{ fontFamily: "open-sans" }}>Todo</Text>
         ) : (
           "Todo"
         ),
