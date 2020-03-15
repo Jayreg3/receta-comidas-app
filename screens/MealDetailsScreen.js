@@ -66,7 +66,8 @@ MealDetailsScreen.navigationOptions = navigationData => {
   const isFavorite = navigationData.navigation.getParam("isFav");
   // const selectedMeal = MEALS.find(meal => meal.id === mealId);
   return {
-    headerTitle: mealTitle,
+    headerTitle:
+      mealTitle.length > 27 ? mealTitle.substring(0, 27) + "..." : mealTitle,
     headerRight: (
       <HeaderButtons HeaderButtonComponent={HeaderButton}>
         <Item
